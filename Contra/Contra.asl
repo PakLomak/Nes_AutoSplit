@@ -57,10 +57,6 @@ init
 	else if (modules.First().ModuleMemorySize == 196608) 
         version = "2.0.0";
 }
-update
-{
-    print(modules.First().ModuleMemorySize.ToString());
-}
 start
 {
     return (current.level == 0x00 && current.start == 0x05 && old.gmode == 0x03 && current.gmode == 0x04);
