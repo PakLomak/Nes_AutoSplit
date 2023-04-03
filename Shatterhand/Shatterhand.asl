@@ -1,65 +1,56 @@
-state("fceux", "2.2.3") //RAM 0x00 == 0x3B1388, 0x000;
+state("qFceux", "2.6.4")
 {
-	byte start:0x3B1388, 0x20;
-    byte choose_lvl:0x3B1388, 0x41;
-	byte level:0x3B1388, 0x55;
-	byte boss:0x3B1388, 0x650;
-	byte reset:0x3B1388, 0x2A;
-	byte portal:0x3B1388, 0x45;
+byte start: "qfceux.exe", 0x0318340, 0x20;
+byte choose_lvl: "qfceux.exe", 0x0318340, 0x41;
+byte level: "qfceux.exe", 0x0318340, 0x55;
+byte boss: "qfceux.exe", 0x0318340, 0x650;
+byte reset: "qfceux.exe", 0x0318340, 0x2A;
+byte portal: "qfceux.exe", 0x0318340, 0x45;
 }
-state("fceux", "2.4.0") //RAM 0x00 == 0x44DCD8, 0x000;
+state("Mesen", "0.9.9")
 {
-	byte start:0x44DCD8, 0x20;
-    byte choose_lvl:0x44DCD8, 0x41;
-	byte level:0x44DCD8, 0x55;
-	byte boss:0x44DCD8, 0x650;
-	byte reset:0x44DCD8, 0x2A;
-	byte portal:0x44DCD8, 0x45;
+byte start: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x20;
+byte choose_lvl: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x41;
+byte level: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x55;
+byte boss: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x650;
+byte reset: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x2A;
+byte portal: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x45;
 }
-state("mesen", "v0.9.9") //RAM 0x00 == "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x00;
+state("Mesen", "2.0.0")
 {
-	byte start:"MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x20;
-	byte choose_lvl:"MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x41;
-	byte level:"MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x55;
-	byte boss:"MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x650;
-	byte reset:"MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x2A;
-	byte portal:"MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x45;
+byte start: "MesenCore.dll", 0x440EF98, 0x4A0, 0x20;
+byte choose_lvl: "MesenCore.dll", 0x440EF98, 0x4A0, 0x41;
+byte level: "MesenCore.dll", 0x440EF98, 0x4A0, 0x55;
+byte boss: "MesenCore.dll", 0x440EF98, 0x4A0, 0x650;
+byte reset: "MesenCore.dll", 0x440EF98, 0x4A0, 0x2A;
+byte portal: "MesenCore.dll", 0x440EF98, 0x4A0, 0x45;
 }
-state("mesen", "v0.9.8") //RAM 0x00 == "MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x00;
+state("Mednafen", "0.9.48")
 {
-	byte start:"MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x20;
-	byte choose_lvl:"MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x41;
-	byte level:"MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x55;
-	byte boss:"MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x650;
-	byte reset:"MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x2A;
-	byte portal:"MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x45;
+byte start: "mednafen.exe", 0x136E720;
+byte choose_lvl: "mednafen.exe", 0x136E741;
+byte level: "mednafen.exe", 0x136E755;
+byte boss: "mednafen.exe", 0x136ED50;
+byte reset: "mednafen.exe", 0x136E72A;
+byte portal: "mednafen.exe", 0x136E745;
 }
-state("mednafen", "1.27.1") //RAM 0x00 == 0x1711540;
+state("Mednafen", "1.29.0")
 {
-	byte start:"mednafen.exe", 0x1711560;
-	byte choose_lvl:"mednafen.exe", 0x1711581;
-	byte level:"mednafen.exe", 0x1711595;
-	byte boss:"mednafen.exe", 0x1711B90;
-	byte reset:"mednafen.exe", 0x171156A;
-	byte portal:"mednafen.exe", 0x1711585;
+byte start: "mednafen.exe", 0x1667560;
+byte choose_lvl: "mednafen.exe", 0x1667581;
+byte level: "mednafen.exe", 0x1667595;
+byte boss: "mednafen.exe", 0x1667B90;
+byte reset: "mednafen.exe", 0x166756A;
+byte portal: "mednafen.exe", 0x1667585;
 }
-state("mednafen", "0.9.48") //RAM 0x00 == 0x136E700;
+state("Nestopia", "1.40")
 {
-	byte start:"mednafen.exe", 0x136E720;
-	byte choose_lvl:"mednafen.exe", 0x136E741;
-	byte level:"mednafen.exe", 0x136E755;
-	byte boss:"mednafen.exe", 0x136ED50;
-	byte reset:"mednafen.exe", 0x136E72A;
-	byte portal:"mednafen.exe", 0x136E745;
-}
-state("Nestopia", "1.52")
-{
-byte start: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x20;
-byte choose_lvl: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x41;
-byte level: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x55;
-byte boss: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x650;
-byte reset: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x2A;
-byte portal: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x45;
+byte start: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x88;
+byte choose_lvl: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xA9;
+byte level: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xBD;
+byte boss: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x6B8;
+byte reset: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x92;
+byte portal: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xAD;
 }
 start
 {
@@ -73,18 +64,14 @@ start
 }
 init
 {
-    if (modules.First().ModuleMemorySize == 90116096)
-        version = "1.27.1";
+    if (modules.First().ModuleMemorySize == 91533312)
+		version = "1.29.0";
     else if (modules.First().ModuleMemorySize == 93294592)
         version = "0.9.48";
-    if (modules.First().ModuleMemorySize == 11714560)
-        version = "v0.9.9";
-    else if (modules.First().ModuleMemorySize == 10412032)
-        version = "v0.9.8";
-    if (modules.First().ModuleMemorySize == 4747264)
-        version = "2.2.3";
-    else if (modules.First().ModuleMemorySize == 6705152)
-        version = "2.4.0";
+	if (modules.First().ModuleMemorySize == 11714560)
+        version = "0.9.9";
+	else if (modules.First().ModuleMemorySize == 196608) 
+        version = "2.0.0";
 	vars.infernon = true;
 	vars.balzire = true;
 	vars.gravitus = true;
