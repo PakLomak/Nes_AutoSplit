@@ -88,7 +88,7 @@ split
 	if (settings["boss_rush"] && current.boss == 0x9E && old.boss != 0x9E && current.level == 0x0F && vars.gravitus == true)	{vars.gravitus = false;
 	return true;} //Gravitus Area G 
 	if (settings["boss_split"] && current.boss == 0xA1 && old.boss != 0xA1 && current.level == 0x0D) return(true); //Infernon
-	if (settings["boss_rush"] && current.boss == 0xAD && old.boss != 0xAD && current.level == 0x0F && vars.infernon =+ true)	{vars.infernon = false;
+	if (settings["boss_rush"] && current.boss == 0xAD && old.boss != 0xAD && current.level == 0x0F && vars.infernon == true)	{vars.infernon = false;
 	return true;} //Infernon Area G
 	if (settings["boss_split"] && current.boss == 0xA6 && old.boss != 0xA6 && current.level == 0x0E) return(true); //Pogoborgs
 	if (settings["boss_split"] && current.boss == 0xAA && old.boss != 0xAA && current.level == 0x12) return(true); //Cyborgape
