@@ -83,10 +83,10 @@ split
 	if (settings["Before_boss"] && current.portal == 0x0C && old.portal != 0x0C) return(true);
 	if (settings["boss_split"] && current.boss == 0x9B && old.boss != 0x9B && current.level == 0x08) return(true); //Balzire
 	if (settings["boss_rush"] && current.boss == 0x9B && old.boss != 0x9B && current.level == 0x0F && vars.balzire == true)		{vars.balzire = false;
-	return true;}; //Balzire Area G
+	return true;} //Balzire Area G
 	if (settings["boss_split"] && current.boss == 0x9E && old.boss != 0x9E && current.level == 0x0C) return(true); //Gravitus
 	if (settings["boss_rush"] && current.boss == 0x9E && old.boss != 0x9E && current.level == 0x0F && vars.gravitus == true)	{vars.gravitus = false;
-	return true;}; //Gravitus Area G 
+	return true;} //Gravitus Area G 
 	if (settings["boss_split"] && current.boss == 0xA1 && old.boss != 0xA1 && current.level == 0x0D) return(true); //Infernon
 	if (settings["boss_rush"] && current.boss == 0xAD && old.boss != 0xAD && current.level == 0x0F && vars.infernon =+ true)	{vars.infernon = false;
 	return true;} //Infernon Area G
