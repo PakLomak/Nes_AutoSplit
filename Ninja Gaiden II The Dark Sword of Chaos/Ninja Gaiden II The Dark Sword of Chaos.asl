@@ -24,7 +24,7 @@ init
 }
 start
 {
-    if (old.start2 == 0x00 && current.start2 == 0x07)
+    if (current.stage == 0x00 && old.start2 == 0x00 && current.start2 == 0x07)
     {
         vars.boss = false;
         return true;
@@ -69,7 +69,7 @@ split
         if (old.stage == 0x2C && current.stage == 0x2D) return true; // Башня
         if (old.stage == 0x2D && current.stage == 0x2E) return true; //Босс
         if (old.stage == 0x2E && current.stage == 0x2F) return true; //Босс
-        if (current.stage == 0x2F && current.boss_hp == 0x00 && current.time == 0x00 && old.time2 != 0x00 && current.time2 == 0x00) return true;
+        if (current.stage == 0x2F && current.boss_hp == 0x00 && current.time == 0x00 && old.time2 != 0x00 && current.time2 == 0x00) return true; //Босс
     }
 }
 reset
