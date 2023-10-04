@@ -6,6 +6,7 @@ byte stage: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x7E;
 byte boss_hp: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x81;
 byte time: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xAD;
 byte time2: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xAC;
+byte time3: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xAB;
 byte imput: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x12;
 }
 state("Nestopia", "1.52")
@@ -18,35 +19,17 @@ byte time: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0
 byte time2: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0xAC;
 byte imput: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x12;
 }
-init
-{
-    vars.boss = false;
-}
 start
 {
-    if (current.stage == 0x00 && old.start2 == 0x00 && current.start2 == 0x07)
-    {
-        vars.boss = false;
-        return true;
-    }
+    if (current.stage == 0x00 && old.start2 == 0x00 && current.start2 == 0x07) return true;
 }
 split
 {
-    /*if (settings["Time"])
-    {
-        if (current.boss_hp == 0x00) vars.boss = true;
-        if (current.time == 0x00 && old.time2 != 0x00 && current.time2 == 0x00 && current.stage != 0x00 && vars.boss == true)
-        {
-            vars.boss = false;
-            return true;
-        }
-    }*/
     if (settings["All"])
     {
     if (current.stage == old.stage + 1) return true;
-    if (current.stage == 0x2F && current.boss_hp == 0x00 && current.time == 0x00 && old.time2 != 0x00 && current.time2 == 0x00) return true;
     }
-    if (settings["Boss"])
+    if (settings["Levels"])
     {
         if (old.stage == 0x02 && current.stage == 0x03) return true; // крыши
         if (old.stage == 0x03 && current.stage == 0x04) return true; //Босс
@@ -69,8 +52,8 @@ split
         if (old.stage == 0x2C && current.stage == 0x2D) return true; // Башня
         if (old.stage == 0x2D && current.stage == 0x2E) return true; //Босс
         if (old.stage == 0x2E && current.stage == 0x2F) return true; //Босс
-        if (current.stage == 0x2F && current.boss_hp == 0x00 && current.time == 0x00 && old.time2 != 0x00 && current.time2 == 0x00) return true; //Босс
     }
+    if (current.stage == 0x2F && current.boss_hp == 0x00 && current.time == 0x00 && current.time2 == 0x00 && old.time3 !=0x00 && current.time3 == 0x00) return true; //Босс
 }
 reset
 {
@@ -78,10 +61,10 @@ reset
 }
 startup
 {
-	settings.Add("main", false, "AutoSplitter for Rockman X by PakLomak");
+	settings.Add("main", false, "AutoSplitter for Ninja Gaiden II The Dark Sword of Chaos by PakLomak");
 	settings.Add("main3", false, "--https://www.twitch.tv/paklomak", "main");
     settings.Add("options", true, "Options");
 	//settings.Add("Time", true, "Split by time", "options");
 	settings.Add("All", false, "Split by screens", "options");
-    settings.Add("Boss", true, "Split by Levels & Boss", "options");
+    settings.Add("Levels", true, "Split by Levels & Boss", "options");
 }
