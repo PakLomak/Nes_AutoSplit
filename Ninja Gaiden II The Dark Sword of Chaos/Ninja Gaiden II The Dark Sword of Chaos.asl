@@ -19,6 +19,44 @@ byte time: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0
 byte time2: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0xAC;
 byte imput: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x12;
 }
+state("Mesen", "0.9.9")
+{
+byte start: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xB0;
+byte start2: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x55;
+byte stage: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x7E;
+byte boss_hp: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x81;
+byte time: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xAD;
+byte time2: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xAC;
+byte time3: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xAB;
+byte imput: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x12;
+}
+update
+{
+    	//print(modules.First().ModuleMemorySize.ToString());
+}
+init
+{
+    if (modules.First().ModuleMemorySize == 91533312)
+	    version = "1.29.0";
+    if (modules.First().ModuleMemorySize == 90116096)
+        version = "1.27.1";
+    else if (modules.First().ModuleMemorySize == 93294592)
+        version = "0.9.48";
+    if (modules.First().ModuleMemorySize == 11714560)
+        version = "0.9.9";
+    else if (modules.First().ModuleMemorySize == 10412032)
+        version = "0.9.8";
+    else if (modules.First().ModuleMemorySize == 196608) 
+        version = "2.0.0";
+    else if (modules.First().ModuleMemorySize == 5283840)
+        version = "0.0.6";
+    else if (modules.First().ModuleMemorySize == 10067968)
+        version = "v0.9.7";
+    if (modules.First().ModuleMemorySize == 4747264)
+        version = "2.2.3";
+    else if (modules.First().ModuleMemorySize == 6705152)
+        version = "2.4.0";
+}
 start
 {
     if (current.stage == 0x00 && old.start2 == 0x00 && current.start2 == 0x07) return true;
