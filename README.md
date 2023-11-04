@@ -8,6 +8,8 @@
 - Mesen [v0.9.9](https://github.com/SourMesen/Mesen/releases/tag/0.9.9 "Download")
 - Mednafen [0.9.48](https://forum.fobby.net/index.php?t=msg&goto=5224&#msg_5224 "Download") [1.29.0](https://forum.fobby.net/index.php?t=rview&goto=6619&th=2057#msg_6619)
 - Nestopia [1.40](https://sourceforge.net/projects/nestopia/files/Nestopia/v1.40/Nestopia140bin.zip/download?use_mirror=nav&download= "Download")
+- Retroarch [Mesen](https://buildbot.libretro.com/stable/ "Download")
+- Для Retroarch необходимо скачать ядро и поместить его в папку cores в корне каталога
 ## Installation
 1. Скачайте .asl файл
 2. Откройте LiveSplit
