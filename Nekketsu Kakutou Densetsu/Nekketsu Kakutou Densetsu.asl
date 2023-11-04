@@ -28,6 +28,11 @@ state("Nestopia", "1.40")
 byte fight: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x6A9;
 byte start: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x369;
 }
+state("Retroarch", "Mesen")
+{
+byte fight: "retroarch.exe", 0x0E88F38, 0x408, 0x641;
+byte start: "retroarch.exe", 0x0E88F38, 0x408, 0x301;
+}
 init
 {
     if (modules.First().ModuleMemorySize == 91533312)
