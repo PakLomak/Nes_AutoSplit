@@ -28,6 +28,11 @@ state("Nestopia", "1.40")
 byte level: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x11E;
 byte reset: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x89;
 }
+state("Retroarch", "Mesen")
+{
+byte level: "retroarch.exe", 0x0E88F38, 0x408, 0xB6;
+byte reset: "retroarch.exe", 0x0E88F38, 0x408, 0x21;
+}
 start
 {
 	if(old.reset == 0x31 && current.reset == 0x79) return true;
