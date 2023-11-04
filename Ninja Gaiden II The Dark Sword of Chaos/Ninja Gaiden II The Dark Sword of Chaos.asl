@@ -30,6 +30,17 @@ byte time2: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xAC;
 byte time3: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xAB;
 byte imput: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x12;
 }
+state("Retroarch", "Mesen")
+{
+byte start: "retroarch.exe", 0x0E88F38, 0x408, 0xB0;
+byte start2: "retroarch.exe", 0x0E88F38, 0x408, 0x55;
+byte stage: "retroarch.exe", 0x0E88F38, 0x408, 0x7E;
+byte boss_hp: "retroarch.exe", 0x0E88F38, 0x408, 0x81;
+byte time: "retroarch.exe", 0x0E88F38, 0x408, 0xAD;
+byte time2: "retroarch.exe", 0x0E88F38, 0x408, 0xAC;
+byte time3: "retroarch.exe", 0x0E88F38, 0x408, 0xAB;
+byte imput: "retroarch.exe", 0x0E88F38, 0x408, 0x12;
+}
 update
 {
     	//print(modules.First().ModuleMemorySize.ToString());
