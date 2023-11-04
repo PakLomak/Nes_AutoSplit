@@ -49,7 +49,18 @@ byte BikeGlitch2: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x318;
 uint screen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x5A;
 uint warpScreen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x6A;
 }
-
+state("Retroarch", "Mesen")
+{
+byte level: "retroarch.exe", 0x0E88F38, 0x408, 0x10;
+byte start: "retroarch.exe", 0x0E88F38, 0x408, 0x3B5;
+byte start2: "retroarch.exe", 0x0E88F38, 0x408, 0x3B6;
+byte complete: "retroarch.exe", 0x0E88F38, 0x408, 0x33;
+byte pauseComplete: "retroarch.exe", 0x0E88F38, 0x408, 0xEB;
+byte BikeGlitch: "retroarch.exe", 0x0E88F38, 0x408, 0x650;
+byte BikeGlitch2: "retroarch.exe", 0x0E88F38, 0x408, 0x318;
+uint screen: "retroarch.exe", 0x0E88F38, 0x408, 0x5A;
+uint warpScreen: "retroarch.exe", 0x0E88F38, 0x408, 0x6A;
+}
 startup
 {
     settings.Add("main", false, "AutoSplitter for Battletoads by BroDMax");
