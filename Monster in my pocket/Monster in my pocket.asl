@@ -1,13 +1,13 @@
-state("qFceux", "2.6.4")
+state("Fceux64", "2.6.6")
 {
-byte scene: "qfceux.exe", 0x0318340, 0x20;
-byte stage: "qfceux.exe", 0x0318340, 0x4C;
-byte inputstatus: "qfceux.exe", 0x0318340, 0x21;
-byte animation: "qfceux.exe", 0x0318340, 0xB8;
-byte boss: "qfceux.exe", 0x0318340, 0x664;
-byte room: "qfceux.exe", 0x0318340, 0x56;
-byte bossrush: "qfceux.exe", 0x0318340, 0x73;
-byte reset: "qfceux.exe", 0x0318340, 0x21;
+byte scene: "fceux64.exe", 0x04D59E0, 0x20;
+byte stage: "fceux64.exe", 0x04D59E0, 0x4C;
+byte inputstatus: "fceux64.exe", 0x04D59E0, 0x21;
+byte animation: "fceux64.exe", 0x04D59E0, 0xB8;
+byte boss: "fceux64.exe", 0x04D59E0, 0x664;
+byte room: "fceux64.exe", 0x04D59E0, 0x56;
+byte bossrush: "fceux64.exe", 0x04D59E0, 0x73;
+byte reset: "fceux64.exe", 0x04D59E0, 0x21;
 }
 state("Mesen", "0.9.9")
 {
@@ -19,6 +19,17 @@ byte boss: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x664;
 byte room: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x56;
 byte bossrush: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x73;
 byte reset: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x21;
+}
+state("Mesen", "0.0.6")
+{
+byte scene: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x20;
+byte stage: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x4C;
+byte inputstatus: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x21;
+byte animation: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xB8;
+byte boss: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x664;
+byte room: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x56;
+byte bossrush: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x73;
+byte reset: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x21;
 }
 state("Mesen", "2.0.0")
 {
@@ -64,6 +75,17 @@ byte room: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xBE;
 byte bossrush: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xDB;
 byte reset: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x89;
 }
+state("Nestopia", "1.52")
+{
+byte scene: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x20;
+byte stage: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x4C;
+byte inputstatus: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x21;
+byte animation: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0xB8;
+byte boss: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x664;
+byte room: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x56;
+byte bossrush: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x73;
+byte reset: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x21;
+}
 state("Retroarch", "Mesen")
 {
 byte scene: "retroarch.exe", 0x0E88F38, 0x408, 0x20;
@@ -77,14 +99,58 @@ byte reset: "retroarch.exe", 0x0E88F38, 0x408, 0x21;
 }
 init
 {
-    if (modules.First().ModuleMemorySize == 91533312)
+int memSize = modules.First().ModuleMemorySize;
+switch (memSize)
+{
+	case 91533312:
+		print("Detected Mednafen 1.29.0");
 		version = "1.29.0";
-    else if (modules.First().ModuleMemorySize == 93294592)
-        version = "0.9.48";
-	if (modules.First().ModuleMemorySize == 11714560)
-        version = "0.9.9";
-	else if (modules.First().ModuleMemorySize == 196608) 
-        version = "2.0.0";
+		break;
+	case 90116096:
+		print("Detected Mednafen 1.27.1");
+		version = "1.27.1";
+		break;
+	case 93294592:
+		print("Detected Mednafen 0.9.48");
+		version = "0.9.48";
+		break;
+	case 11714560:
+		print("Detected Mesen 0.9.9");
+		version = "0.9.9";
+		break;
+	case 10412032:
+		print("Detected Mesen 0.9.8");
+		version = "0.9.8";
+		break;
+	case 10067968:
+		print("Detected Mesen 0.9.7");
+		version = "0.9.7";
+		break;
+	case 196608:
+		print("Detected Mesen 2.0.0");
+		version = "2.0.0";
+		break;
+	case 5283840:
+		print("Detected Mesen 0.0.6");
+		version = "0.0.6";
+		break;
+	case 8069120:
+		print("Detected FCEUX 2.6.6");
+		version = "2.6.6";
+		break;
+	case 2113536:
+		print("Detected Nestopia 1.40");
+		version = "1.40";
+		break;
+	case 1974272:
+		print("Detected Nestopia 1.52");
+		version = "1.52";
+		break;
+	default:
+		print("Unknown Emulator");
+		version = "";
+		break;
+}
 }
 start
 {

@@ -1,13 +1,13 @@
-state("qFceux", "2.6.4")
+state("Fceux64", "2.6.6")
 {
-byte gmode: "qfceux.exe", 0x0318340, 0xA0;
-byte fly: "qfceux.exe", 0x0318340, 0xB0;
-byte stage: "qfceux.exe", 0x0318340, 0x50;
-byte live: "qfceux.exe", 0x0318340, 0x53;
-byte endg: "qfceux.exe", 0x0318340, 0x5C;
-byte time: "qfceux.exe", 0x0318340, 0x3E;
-byte pavuk: "qfceux.exe", 0x0318340, 0x7A9;
-byte reset: "qfceux.exe", 0x0318340, 0x30;
+byte gmode: "fceux64.exe", 0x04D59E0, 0xA0;
+byte fly: "fceux64.exe", 0x04D59E0, 0xB0;
+byte stage: "fceux64.exe", 0x04D59E0, 0x50;
+byte live: "fceux64.exe", 0x04D59E0, 0x53;
+byte endg: "fceux64.exe", 0x04D59E0, 0x5C;
+byte time: "fceux64.exe", 0x04D59E0, 0x3E;
+byte pavuk: "fceux64.exe", 0x04D59E0, 0x7A9;
+byte reset: "fceux64.exe", 0x04D59E0, 0x30;
 }
 state("Mesen", "0.9.9")
 {
@@ -19,6 +19,17 @@ byte endg: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x5C;
 byte time: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x3E;
 byte pavuk: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x7A9;
 byte reset: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x30;
+}
+state("Mesen", "0.0.6")
+{
+byte gmode: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xA0;
+byte fly: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xB0;
+byte stage: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x50;
+byte live: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x53;
+byte endg: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x5C;
+byte time: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3E;
+byte pavuk: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x7A9;
+byte reset: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x30;
 }
 state("Mesen", "2.0.0")
 {
@@ -64,6 +75,17 @@ byte time: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xA6;
 byte pavuk: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x811;
 byte reset: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x98;
 }
+state("Nestopia", "1.52")
+{
+byte gmode: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0xA0;
+byte fly: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0xB0;
+byte stage: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x50;
+byte live: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x53;
+byte endg: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x5C;
+byte time: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x3E;
+byte pavuk: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x7A9;
+byte reset: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x30;
+}
 state("Retroarch", "Mesen")
 {
 byte gmode: "retroarch.exe", 0x0E88F38, 0x408, 0xA0;
@@ -77,14 +99,58 @@ byte reset: "retroarch.exe", 0x0E88F38, 0x408, 0x30;
 }
 init
 {
-    if (modules.First().ModuleMemorySize == 91533312)
+int memSize = modules.First().ModuleMemorySize;
+switch (memSize)
+{
+	case 91533312:
+		print("Detected Mednafen 1.29.0");
 		version = "1.29.0";
-    else if (modules.First().ModuleMemorySize == 93294592)
-        version = "0.9.48";
-	if (modules.First().ModuleMemorySize == 11714560)
-        version = "0.9.9";
-	else if (modules.First().ModuleMemorySize == 196608) 
-        version = "2.0.0";
+		break;
+	case 90116096:
+		print("Detected Mednafen 1.27.1");
+		version = "1.27.1";
+		break;
+	case 93294592:
+		print("Detected Mednafen 0.9.48");
+		version = "0.9.48";
+		break;
+	case 11714560:
+		print("Detected Mesen 0.9.9");
+		version = "0.9.9";
+		break;
+	case 10412032:
+		print("Detected Mesen 0.9.8");
+		version = "0.9.8";
+		break;
+	case 10067968:
+		print("Detected Mesen 0.9.7");
+		version = "0.9.7";
+		break;
+	case 196608:
+		print("Detected Mesen 2.0.0");
+		version = "2.0.0";
+		break;
+	case 5283840:
+		print("Detected Mesen 0.0.6");
+		version = "0.0.6";
+		break;
+	case 8069120:
+		print("Detected FCEUX 2.6.6");
+		version = "2.6.6";
+		break;
+	case 2113536:
+		print("Detected Nestopia 1.40");
+		version = "1.40";
+		break;
+	case 1974272:
+		print("Detected Nestopia 1.52");
+		version = "1.52";
+		break;
+	default:
+		print("Unknown Emulator");
+		version = "";
+		break;
+}
 }
 start
 {
