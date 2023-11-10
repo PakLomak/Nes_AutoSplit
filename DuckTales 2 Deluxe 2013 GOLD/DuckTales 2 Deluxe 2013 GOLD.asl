@@ -1,20 +1,20 @@
-state("qFceux", "2.6.4")
+state("Fceux64", "2.6.6")
 {
-byte start: "qfceux.exe", 0x0318340, 0xCE;
-byte stage: "qfceux.exe", 0x0318340, 0xC8;
-byte map0: "qfceux.exe", 0x0318340, 0x3ED;
-byte artifact0: "qfceux.exe", 0x0318340, 0x33E;
-byte map1: "qfceux.exe", 0x0318340, 0x337;
-byte artifact1: "qfceux.exe", 0x0318340, 0x35E;
-byte map2: "qfceux.exe", 0x0318340, 0x30E;
-byte artifact2: "qfceux.exe", 0x0318340, 0x337;
-byte map3: "qfceux.exe", 0x0318340, 0x3D5;
-byte artifact3: "qfceux.exe", 0x0318340, 0x38A;
-byte map4: "qfceux.exe", 0x0318340, 0x3EA;
-byte artifact4: "qfceux.exe", 0x0318340, 0x399;
-byte even: "qfceux.exe", 0x0318340, 0xC7;
-byte boss_hp: "qfceux.exe", 0x0318340, 0xB9;
-byte reset: "qfceux.exe", 0x0318340, 0xC3;
+byte start: "fceux64.exe", 0x04D59E0, 0xCE;
+byte stage: "fceux64.exe", 0x04D59E0, 0xC8;
+byte map0: "fceux64.exe", 0x04D59E0, 0x3ED;
+byte artifact0: "fceux64.exe", 0x04D59E0, 0x33E;
+byte map1: "fceux64.exe", 0x04D59E0, 0x337;
+byte artifact1: "fceux64.exe", 0x04D59E0, 0x35E;
+byte map2: "fceux64.exe", 0x04D59E0, 0x30E;
+byte artifact2: "fceux64.exe", 0x04D59E0, 0x337;
+byte map3: "fceux64.exe", 0x04D59E0, 0x3D5;
+byte artifact3: "fceux64.exe", 0x04D59E0, 0x38A;
+byte map4: "fceux64.exe", 0x04D59E0, 0x3EA;
+byte artifact4: "fceux64.exe", 0x04D59E0, 0x399;
+byte even: "fceux64.exe", 0x04D59E0, 0xC7;
+byte boss_hp: "fceux64.exe", 0x04D59E0, 0xB9;
+byte reset: "fceux64.exe", 0x04D59E0, 0xC3;
 }
 state("Mesen", "0.9.9")
 {
@@ -33,6 +33,24 @@ byte artifact4: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x399;
 byte even: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xC7;
 byte boss_hp: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xB9;
 byte reset: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xC3;
+}
+state("Mesen", "0.0.6")
+{
+byte start: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xCE;
+byte stage: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xC8;
+byte map0: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3ED;
+byte artifact0: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x33E;
+byte map1: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x337;
+byte artifact1: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x35E;
+byte map2: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x30E;
+byte artifact2: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x337;
+byte map3: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3D5;
+byte artifact3: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x38A;
+byte map4: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3EA;
+byte artifact4: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x399;
+byte even: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xC7;
+byte boss_hp: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xB9;
+byte reset: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xC3;
 }
 state("Mesen", "2.0.0")
 {
@@ -88,6 +106,24 @@ byte even: "mednafen.exe", 0x1667607;
 byte boss_hp: "mednafen.exe", 0x16675F9;
 byte reset: "mednafen.exe", 0x1667603;
 }
+state("Nestopia", "1.40")
+{
+byte start: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x136;
+byte stage: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x130;
+byte map0: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x455;
+byte artifact0: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x3A6;
+byte map1: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x39F;
+byte artifact1: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x3C6;
+byte map2: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x376;
+byte artifact2: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x39F;
+byte map3: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x43D;
+byte artifact3: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x3F2;
+byte map4: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x452;
+byte artifact4: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x401;
+byte even: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x12F;
+byte boss_hp: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x121;
+byte reset: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x12B;
+}
 state("Nestopia", "1.52")
 {
 byte start: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0xCE;
@@ -124,6 +160,7 @@ byte even: "retroarch.exe", 0x0E88F38, 0x408, 0xC7;
 byte boss_hp: "retroarch.exe", 0x0E88F38, 0x408, 0xB9;
 byte reset: "retroarch.exe", 0x0E88F38, 0x408, 0xC3;
 }
+
 start
 {
     return (old.start == 0x00 && current.start == 0x03);
@@ -150,14 +187,58 @@ update
 }
 init
 {
-    if (modules.First().ModuleMemorySize == 91533312)
+int memSize = modules.First().ModuleMemorySize;
+switch (memSize)
+{
+	case 91533312:
+		print("Detected Mednafen 1.29.0");
 		version = "1.29.0";
-    else if (modules.First().ModuleMemorySize == 93294592)
-        version = "0.9.48";
-	if (modules.First().ModuleMemorySize == 11714560)
-        version = "0.9.9";
-	else if (modules.First().ModuleMemorySize == 196608) 
-        version = "2.0.0";
+		break;
+	case 90116096:
+		print("Detected Mednafen 1.27.1");
+		version = "1.27.1";
+		break;
+	case 93294592:
+		print("Detected Mednafen 0.9.48");
+		version = "0.9.48";
+		break;
+	case 11714560:
+		print("Detected Mesen 0.9.9");
+		version = "0.9.9";
+		break;
+	case 10412032:
+		print("Detected Mesen 0.9.8");
+		version = "0.9.8";
+		break;
+	case 10067968:
+		print("Detected Mesen 0.9.7");
+		version = "0.9.7";
+		break;
+	case 196608:
+		print("Detected Mesen 2.0.0");
+		version = "2.0.0";
+		break;
+	case 5283840:
+		print("Detected Mesen 0.0.6");
+		version = "0.0.6";
+		break;
+	case 8069120:
+		print("Detected FCEUX 2.6.6");
+		version = "2.6.6";
+		break;
+	case 2113536:
+		print("Detected Nestopia 1.40");
+		version = "1.40";
+		break;
+	case 1974272:
+		print("Detected Nestopia 1.52");
+		version = "1.52";
+		break;
+	default:
+		print("Unknown Emulator");
+		version = "";
+		break;
+}
 }
 reset
 {
