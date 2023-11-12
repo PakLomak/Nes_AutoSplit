@@ -136,7 +136,7 @@ switch (memSize)
 }
 start
 {
-    return (current.screen == 0xA5 && old.start != 0xCB && current.start == 0xCB);
+    if (current.screen == 0xA5 && old.start != 0xCB && current.start == 0xCB) return true;
 }
 split
 {
@@ -147,7 +147,12 @@ split
     if (settings["Stage"] && old.sublvl == 0x08 && current.sublvl == 0x09) return true;
     if (settings["Bonus"] && current.sublvl == 0x0B && old.bonus == 0x00 && current.bonus == 0xFF) return true;
     if (settings["Stage"] && old.sublvl == 0x0B && current.sublvl == 0x0C) return true;
-    if (current.sublvl == 0x0E && current.end == 0x0A && old.end != 0x0A && current.t >= 0x01) return true;
+    if (current.sublvl == 0x0E && current.t >= 0x01)
+	{
+	 if (current.end == 0x0A && old.end != 0x0A) return true;
+	 if (current.end == 0x28 && old.end == 0x0A) return true;
+	}
+
 }
 reset
 {
