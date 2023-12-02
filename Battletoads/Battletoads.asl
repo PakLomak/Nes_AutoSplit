@@ -1,6 +1,8 @@
 state("Fceux64", "2.6.6")
 {
 byte level: "fceux64.exe", 0x04D59E0, 0x10;
+byte ropedown: "fceux64.exe", 0x04D59E0, 0x3DF;
+byte scroll: "fceux64.exe", 0x04D59E0, 0xC8;
 byte start: "fceux64.exe", 0x04D59E0, 0x3B5;
 byte start2: "fceux64.exe", 0x04D59E0, 0x3B6;
 byte complete: "fceux64.exe", 0x04D59E0, 0x33;
@@ -13,6 +15,8 @@ uint warpScreen: "fceux64.exe", 0x04D59E0, 0x6A;
 state("Mesen", "0.9.9")
 {
 byte level: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x10;
+byte ropedown: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x3DF;
+byte scroll: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xC8;
 byte start: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x3B5;
 byte start2: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x3B6;
 byte complete: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x33;
@@ -25,6 +29,8 @@ uint warpScreen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x6A;
 state("Mesen", "0.0.6")
 {
 byte level: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x10;
+byte ropedown: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3DF;
+byte scroll: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xC8;
 byte start: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3B5;
 byte start2: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3B6;
 byte complete: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x33;
@@ -37,6 +43,8 @@ uint warpScreen: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x6A;
 state("Mesen", "2.0.0")
 {
 byte level: "MesenCore.dll", 0x440EF98, 0x4A0, 0x10;
+byte ropedown: "MesenCore.dll", 0x440EF98, 0x4A0, 0x3DF;
+byte scroll: "MesenCore.dll", 0x440EF98, 0x4A0, 0xC8;
 byte start: "MesenCore.dll", 0x440EF98, 0x4A0, 0x3B5;
 byte start2: "MesenCore.dll", 0x440EF98, 0x4A0, 0x3B6;
 byte complete: "MesenCore.dll", 0x440EF98, 0x4A0, 0x33;
@@ -49,6 +57,8 @@ uint warpScreen: "MesenCore.dll", 0x440EF98, 0x4A0, 0x6A;
 state("Mednafen", "0.9.48")
 {
 byte level: "mednafen.exe", 0x136E710;
+byte ropedown: "mednafen.exe", 0x136EADF;
+byte scroll: "mednafen.exe", 0x136E7C8;
 byte start: "mednafen.exe", 0x136EAB5;
 byte start2: "mednafen.exe", 0x136EAB6;
 byte complete: "mednafen.exe", 0x136E733;
@@ -61,6 +71,8 @@ uint warpScreen: "mednafen.exe", 0x136E76A;
 state("Mednafen", "1.29.0")
 {
 byte level: "mednafen.exe", 0x1667550;
+byte ropedown: "mednafen.exe", 0x166791F;
+byte scroll: "mednafen.exe", 0x1667608;
 byte start: "mednafen.exe", 0x16678F5;
 byte start2: "mednafen.exe", 0x16678F6;
 byte complete: "mednafen.exe", 0x1667573;
@@ -73,6 +85,8 @@ uint warpScreen: "mednafen.exe", 0x16675AA;
 state("Nestopia", "1.40")
 {
 byte level: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x78;
+byte ropedown: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x447;
+byte scroll: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x130;
 byte start: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x41D;
 byte start2: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x41E;
 byte complete: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x9B;
@@ -85,6 +99,8 @@ uint warpScreen: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xD2;
 state("Nestopia", "1.52")
 {
 byte level: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x10;
+byte ropedown: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x3DF;
+byte scroll: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0xC8;
 byte start: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x3B5;
 byte start2: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x3B6;
 byte complete: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x33;
@@ -97,6 +113,8 @@ uint warpScreen: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0x
 state("Retroarch", "Mesen")
 {
 byte level: "retroarch.exe", 0x0E88F38, 0x408, 0x10;
+byte ropedown: "retroarch.exe", 0x0E88F38, 0x408, 0x3DF;
+byte scroll: "retroarch.exe", 0x0E88F38, 0x408, 0xC8;
 byte start: "retroarch.exe", 0x0E88F38, 0x408, 0x3B5;
 byte start2: "retroarch.exe", 0x0E88F38, 0x408, 0x3B6;
 byte complete: "retroarch.exe", 0x0E88F38, 0x408, 0x33;
@@ -106,7 +124,6 @@ byte BikeGlitch2: "retroarch.exe", 0x0E88F38, 0x408, 0x318;
 uint screen: "retroarch.exe", 0x0E88F38, 0x408, 0x5A;
 uint warpScreen: "retroarch.exe", 0x0E88F38, 0x408, 0x6A;
 }
-
 startup
 {
     settings.Add("main", false, "AutoSplitter for Battletoads by BroDMax");
@@ -224,16 +241,23 @@ split
 
 reset
 {
-    return ((old.level != 0x00) && (current.level == 0x00));
+    return((old.level != 0x00) && (current.level == 0x00));
 }
 
 start
 {
-    return (current.level == 0x01) && (((old.start == 0x05) && (current.start == 0x04)) ||
-    ((old.start2 == 0x05) && (current.start2 == 0x04)));
+    if (old.scroll == 0x98 && current.scroll <= 0x98 && current.level == 0x01) vars.start = false;
+    if (old.ropedown != 0x00 && current.ropedown >= 0x05 && vars.start == false)
+    {
+        vars.start = true;
+        return true;
+    }
+    //return (current.level == 0x01) && (((old.start == 0x05) && (current.start == 0x04)) ||
+    //((old.start2 == 0x05) && (current.start2 == 0x04)));
 }
 init
 {
+    vars.start = true;
 int memSize = modules.First().ModuleMemorySize;
 switch (memSize)
 {
