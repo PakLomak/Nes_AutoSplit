@@ -1,7 +1,7 @@
 state("Fceux64", "2.6.6")
 {
 byte level: "fceux64.exe", 0x04D59E0, 0x10;
-byte ropedown: "fceux64.exe", 0x04D59E0, 0x3DF;
+byte ropedown: "fceux64.exe", 0x04D59E0, 0x583;
 byte scroll: "fceux64.exe", 0x04D59E0, 0xC8;
 byte start: "fceux64.exe", 0x04D59E0, 0x3B5;
 byte start2: "fceux64.exe", 0x04D59E0, 0x3B6;
@@ -15,7 +15,7 @@ uint warpScreen: "fceux64.exe", 0x04D59E0, 0x6A;
 state("Mesen", "0.9.9")
 {
 byte level: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x10;
-byte ropedown: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x3DF;
+byte ropedown: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x583;
 byte scroll: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xC8;
 byte start: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x3B5;
 byte start2: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x3B6;
@@ -29,7 +29,7 @@ uint warpScreen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x6A;
 state("Mesen", "0.0.6")
 {
 byte level: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x10;
-byte ropedown: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3DF;
+byte ropedown: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x583;
 byte scroll: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xC8;
 byte start: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3B5;
 byte start2: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x3B6;
@@ -43,7 +43,7 @@ uint warpScreen: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x6A;
 state("Mesen", "2.0.0")
 {
 byte level: "MesenCore.dll", 0x440EF98, 0x4A0, 0x10;
-byte ropedown: "MesenCore.dll", 0x440EF98, 0x4A0, 0x3DF;
+byte ropedown: "MesenCore.dll", 0x440EF98, 0x4A0, 0x583;
 byte scroll: "MesenCore.dll", 0x440EF98, 0x4A0, 0xC8;
 byte start: "MesenCore.dll", 0x440EF98, 0x4A0, 0x3B5;
 byte start2: "MesenCore.dll", 0x440EF98, 0x4A0, 0x3B6;
@@ -99,7 +99,7 @@ uint warpScreen: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xD2;
 state("Nestopia", "1.52")
 {
 byte level: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x10;
-byte ropedown: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x3DF;
+byte ropedown: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x583;
 byte scroll: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0xC8;
 byte start: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x3B5;
 byte start2: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x3B6;
@@ -113,7 +113,7 @@ uint warpScreen: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0x
 state("Retroarch", "Mesen")
 {
 byte level: "retroarch.exe", 0x0E88F38, 0x408, 0x10;
-byte ropedown: "retroarch.exe", 0x0E88F38, 0x408, 0x3DF;
+byte ropedown: "retroarch.exe", 0x0E88F38, 0x408, 0x583;
 byte scroll: "retroarch.exe", 0x0E88F38, 0x408, 0xC8;
 byte start: "retroarch.exe", 0x0E88F38, 0x408, 0x3B5;
 byte start2: "retroarch.exe", 0x0E88F38, 0x408, 0x3B6;
@@ -200,6 +200,7 @@ split
 	
 	if ((current.BikeGlitch == 0x0F) && (old.BikeGlitch2 != 0x93) && (current.BikeGlitch2 == 0x93))
 	{
+        vars.bikeG = false;
 		switch((int)current.level)
         {
             case 3:
@@ -212,7 +213,20 @@ split
                 break;
 		}
 	}
-	
+    if (old.screen == 0x0F251505 && current.screen == 0x0F261602 && vars.bikeG == true)
+    {
+        switch((int)current.level)
+        {
+            case 3:
+				// Bike Glitch
+                if (settings["warp2"]) return true;
+                break;
+            case 5:
+				// The Revolution
+                if (settings["lvl12"]) return true;
+                break;
+		}
+    }
     // Armageddon (end game)
     if ((old.screen == 0x0F241404) && (current.screen == 0x0F201C0C) && ((current.level & 0xFE) == 0xFE) && (settings["lvl13"])) return true;
     // Warps
@@ -246,14 +260,19 @@ reset
 
 start
 {
-    if (old.scroll == 0x98 && current.scroll <= 0x98 && current.level == 0x01) vars.start = false;
-    if (old.ropedown != 0x00 && current.ropedown >= 0x05 && vars.start == false)
+    if (current.level == 0x01 && old.ropedown == 0x0A) vars.start = false;
+    if (old.ropedown != 0x0A && current.ropedown <= 0x05 && vars.start == false)
     {
         vars.start = true;
         return true;
     }
-    //return (current.level == 0x01) && (((old.start == 0x05) && (current.start == 0x04)) ||
-    //((old.start2 == 0x05) && (current.start2 == 0x04)));
+    /*return (current.level == 0x01) && (((old.start == 0x05) && (current.start == 0x04)) ||
+    ((old.start2 == 0x05) && (current.start2 == 0x04)));*/
+}
+update
+{
+	/*print(vars.start.ToString());
+    print(current.screen.ToString("X8"));*/
 }
 init
 {
