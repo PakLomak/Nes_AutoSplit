@@ -57,7 +57,7 @@ uint warpScreen: "MesenCore.dll", 0x440EF98, 0x4A0, 0x6A;
 state("Mednafen", "0.9.48")
 {
 byte level: "mednafen.exe", 0x136E710;
-byte ropedown: "mednafen.exe", 0x136EADF;
+byte ropedown: "mednafen.exe", 0x136EC83;
 byte scroll: "mednafen.exe", 0x136E7C8;
 byte start: "mednafen.exe", 0x136EAB5;
 byte start2: "mednafen.exe", 0x136EAB6;
@@ -71,7 +71,7 @@ uint warpScreen: "mednafen.exe", 0x136E76A;
 state("Mednafen", "1.29.0")
 {
 byte level: "mednafen.exe", 0x1667550;
-byte ropedown: "mednafen.exe", 0x166791F;
+byte ropedown: "mednafen.exe", 0x1667AC3;
 byte scroll: "mednafen.exe", 0x1667608;
 byte start: "mednafen.exe", 0x16678F5;
 byte start2: "mednafen.exe", 0x16678F6;
@@ -85,7 +85,7 @@ uint warpScreen: "mednafen.exe", 0x16675AA;
 state("Nestopia", "1.40")
 {
 byte level: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x78;
-byte ropedown: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x447;
+byte ropedown: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x5EB;
 byte scroll: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x130;
 byte start: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x41D;
 byte start2: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x41E;
