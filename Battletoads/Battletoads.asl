@@ -25,6 +25,7 @@ byte BikeGlitch: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x650;
 byte BikeGlitch2: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x318;
 uint screen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x5A;
 uint warpScreen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x6A;
+byte warpScreen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xBD;
 }
 state("Mesen", "0.0.6")
 {
@@ -124,6 +125,7 @@ byte BikeGlitch: "retroarch.exe", 0x0E88F38, 0x408, 0x650;
 byte BikeGlitch2: "retroarch.exe", 0x0E88F38, 0x408, 0x318;
 uint screen: "retroarch.exe", 0x0E88F38, 0x408, 0x5A;
 uint warpScreen: "retroarch.exe", 0x0E88F38, 0x408, 0x6A;
+byte endDialog: "retroarch.exe", 0x0E88F38, 0x408, 0xBD;
 }
 startup
 {
@@ -229,7 +231,9 @@ split
 		}
     }
     // Armageddon (end game)
-    if ((old.screen == 0x0F241404 || old.screen == 0x0f102818) && (current.screen == 0x0F201C0C) && ((current.level & 0xFE) == 0xFE) && (settings["lvl13"])) return true;
+    if (current.level == 0x0D) vars.armagedon = true;
+    if (current.endDialog == 0x1C && vars.armagedon == true) vars.qieen = true;
+    if ((old.screen == 0x0F241404 || old.screen == 0x0f102818) && (current.screen == 0x0F201C0C) && ((current.level & 0xFE) == 0xFE) && vars.qieen == true && (settings["lvl13"])) return true;
     // Warps
     if (((old.warpScreen != 0x0F382205) && (current.warpScreen == 0x0F382205)) || ((old.warpScreen != 0x0F121620) && (current.warpScreen == 0x0F121620)))
     {
@@ -265,6 +269,8 @@ start
     if (old.ropedown != 0x0A && current.ropedown <= 0x05 && vars.start == false)
     {
         vars.start = true;
+        vars.qieen = false;
+        vars.armagedon = false;
         return true;
     }
     /*return (current.level == 0x01) && (((old.start == 0x05) && (current.start == 0x04)) ||
