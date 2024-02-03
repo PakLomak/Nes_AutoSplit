@@ -42,18 +42,19 @@ uint warpScreen: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x6A;
 }
 state("Mesen", "2.0.0")
 {
-byte level: "MesenCore.dll", 0x440EF98, 0x4A0, 0x10;
-byte ropedown: "MesenCore.dll", 0x440EF98, 0x4A0, 0x583;
-byte scroll: "MesenCore.dll", 0x440EF98, 0x4A0, 0xC8;
-byte start: "MesenCore.dll", 0x440EF98, 0x4A0, 0x3B5;
-byte start2: "MesenCore.dll", 0x440EF98, 0x4A0, 0x3B6;
-byte complete: "MesenCore.dll", 0x440EF98, 0x4A0, 0x33;
-byte pauseComplete: "MesenCore.dll", 0x440EF98, 0x4A0, 0xEB;
-byte BikeGlitch: "MesenCore.dll", 0x440EF98, 0x4A0, 0x650;
-byte BikeGlitch2: "MesenCore.dll", 0x440EF98, 0x4A0, 0x318;
-uint screen: "MesenCore.dll", 0x440EF98, 0x4A0, 0x5A;
-uint warpScreen: "MesenCore.dll", 0x440EF98, 0x4A0, 0x6A;
+byte level: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x10;
+byte ropedown: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x583;
+byte scroll: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0xC8;
+byte start: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x3B5;
+byte start2: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x3B6;
+byte complete: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x33;
+byte pauseComplete: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0xEB;
+byte BikeGlitch: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x650;
+byte BikeGlitch2: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x318;
+uint screen: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x5A;
+uint warpScreen: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x6A;
 }
+
 state("Mednafen", "0.9.48")
 {
 byte level: "mednafen.exe", 0x136E710;
@@ -228,7 +229,7 @@ split
 		}
     }
     // Armageddon (end game)
-    if ((old.screen == 0x0F241404) && (current.screen == 0x0F201C0C) && ((current.level & 0xFE) == 0xFE) && (settings["lvl13"])) return true;
+    if ((old.screen == 0x0F241404 || old.screen == 0x0f102818) && (current.screen == 0x0F201C0C) && ((current.level & 0xFE) == 0xFE) && (settings["lvl13"])) return true;
     // Warps
     if (((old.warpScreen != 0x0F382205) && (current.warpScreen == 0x0F382205)) || ((old.warpScreen != 0x0F121620) && (current.warpScreen == 0x0F121620)))
     {
@@ -271,8 +272,7 @@ start
 }
 update
 {
-	/*print(vars.start.ToString());
-    print(current.screen.ToString("X8"));*/
+	print(modules.First().ModuleMemorySize.ToString());
 }
 init
 {
@@ -304,7 +304,7 @@ switch (memSize)
 		print("Detected Mesen 0.9.7");
 		version = "0.9.7";
 		break;
-	case 196608:
+	case 204800:
 		print("Detected Mesen 2.0.0");
 		version = "2.0.0";
 		break;
