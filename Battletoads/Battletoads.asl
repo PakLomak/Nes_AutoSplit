@@ -11,6 +11,7 @@ byte BikeGlitch: "fceux64.exe", 0x04D59E0, 0x650;
 byte BikeGlitch2: "fceux64.exe", 0x04D59E0, 0x318;
 uint screen: "fceux64.exe", 0x04D59E0, 0x5A;
 uint warpScreen: "fceux64.exe", 0x04D59E0, 0x6A;
+byte endDialog: "fceux64.exe", 0x04D59E0, 0xBD;
 }
 state("Mesen", "0.9.9")
 {
@@ -25,7 +26,7 @@ byte BikeGlitch: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x650;
 byte BikeGlitch2: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x318;
 uint screen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x5A;
 uint warpScreen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x6A;
-byte warpScreen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xBD;
+byte endDialog: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0xBD;
 }
 state("Mesen", "0.0.6")
 {
@@ -40,6 +41,7 @@ byte BikeGlitch: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x650;
 byte BikeGlitch2: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x318;
 uint screen: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x5A;
 uint warpScreen: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x6A;
+byte endDialog: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0xBD;
 }
 state("Mesen", "2.0.0")
 {
@@ -54,8 +56,8 @@ byte BikeGlitch: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x650;
 byte BikeGlitch2: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x318;
 uint screen: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x5A;
 uint warpScreen: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x6A;
+byte endDialog: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0xBD;
 }
-
 state("Mednafen", "0.9.48")
 {
 byte level: "mednafen.exe", 0x136E710;
@@ -69,6 +71,7 @@ byte BikeGlitch: "mednafen.exe", 0x136ED50;
 byte BikeGlitch2: "mednafen.exe", 0x136EA18;
 uint screen: "mednafen.exe", 0x136E75A;
 uint warpScreen: "mednafen.exe", 0x136E76A;
+byte endDialog: "mednafen.exe", 0x136E7BD;
 }
 state("Mednafen", "1.29.0")
 {
@@ -83,6 +86,7 @@ byte BikeGlitch: "mednafen.exe", 0x1667B90;
 byte BikeGlitch2: "mednafen.exe", 0x1667858;
 uint screen: "mednafen.exe", 0x166759A;
 uint warpScreen: "mednafen.exe", 0x16675AA;
+byte endDialog: "mednafen.exe", 0x16675FD;
 }
 state("Nestopia", "1.40")
 {
@@ -97,6 +101,7 @@ byte BikeGlitch: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x6B8;
 byte BikeGlitch2: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x380;
 uint screen: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xC2;
 uint warpScreen: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xD2;
+byte endDialog: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x125;
 }
 state("Nestopia", "1.52")
 {
@@ -111,6 +116,7 @@ byte BikeGlitch: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0x
 byte BikeGlitch2: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x318;
 uint screen: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x5A;
 uint warpScreen: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x6A;
+byte endDialog: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0xBD;
 }
 state("Retroarch", "Mesen")
 {
@@ -155,7 +161,24 @@ startup
     settings.Add("warp6", true, "Warp in Level 6", "gWarps");
     settings.Add("warp10", true, "Warp in Level 10", "gWarps");
 }
+update
+{
+    if (settings.ResetEnabled == false && timer.CurrentPhase != TimerPhase.NotRunning && timer.CurrentPhase != TimerPhase.Ended)
+    {
+        if ((current.screen == 0x0F231304) && (current.level == 0x00))
+        {
+            while (timer.CurrentSplitIndex > 0)
+            {
+                if (timer.CurrentPhase == TimerPhase.Ended)
+                    timer.CurrentPhase = TimerPhase.Running;
+                timer.CurrentSplitIndex--;
 
+            timer.CurrentSplit.SplitTime = default(Time);
+            timer.Run.HasChanged = true;
+            }
+        }
+    }
+}
 split
 {
     if ((old.complete != 0x81) && (current.complete == 0x81) && ((current.pauseComplete & 0xFE) == 0x80))
@@ -200,7 +223,6 @@ split
                 break;
         }
     }
-	
 	if ((current.BikeGlitch == 0x0F) && (old.BikeGlitch2 != 0x93) && (current.BikeGlitch2 == 0x93))
 	{
         vars.bikeG = false;
@@ -260,7 +282,7 @@ split
 
 reset
 {
-    return((old.level != 0x00) && (current.level == 0x00));
+    return((current.screen == 0x0F231304) && (current.level == 0x00));
 }
 
 start
@@ -275,10 +297,6 @@ start
     }
     /*return (current.level == 0x01) && (((old.start == 0x05) && (current.start == 0x04)) ||
     ((old.start2 == 0x05) && (current.start2 == 0x04)));*/
-}
-update
-{
-	print(modules.First().ModuleMemorySize.ToString());
 }
 init
 {

@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Run version="1.7.0">
   <GameIcon />
   <GameName>Battletoads (NES)</GameName>
   <CategoryName>100%</CategoryName>
+  <LayoutPath>
+  </LayoutPath>
   <Metadata>
     <Run id="" />
     <Platform usesEmulator="False">
@@ -12,150 +14,194 @@
     <Variables />
   </Metadata>
   <Offset>00:00:00</Offset>
-  <AttemptCount>0</AttemptCount>
-  <AttemptHistory />
+  <AttemptCount>5</AttemptCount>
+  <AttemptHistory>
+    <Attempt id="1" started="02/09/2024 12:04:12" isStartedSynced="True" ended="02/09/2024 12:04:50" isEndedSynced="True" />
+    <Attempt id="2" started="02/09/2024 12:05:20" isStartedSynced="True" ended="02/09/2024 12:39:43" isEndedSynced="True">
+      <PauseTime>00:00:22.7697211</PauseTime>
+    </Attempt>
+    <Attempt id="3" started="02/09/2024 12:45:03" isStartedSynced="True" ended="02/09/2024 12:45:18" isEndedSynced="True" />
+    <Attempt id="4" started="02/09/2024 12:45:32" isStartedSynced="True" ended="02/09/2024 12:47:36" isEndedSynced="True" />
+  </AttemptHistory>
   <Segments>
     <Segment>
-      <Name>1 - Ragnarok&#39;s Canyon</Name>
+      <Name>1 - Ragnarok's Canyon</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:01:00.3669316</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:01:09.7851827</RealTime>
+        </Time>
+        <Time id="4">
+          <RealTime>00:01:00.3669316</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>2 - Wookie Hole</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:02:15.1006091</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:02:15.1006091</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>3 - Turbo Tunnel</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:02:49.4753386</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:02:49.4753386</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>4 - Arctic Cavern</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:02:17.4401953</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:02:17.4401953</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>5 - Surf City</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:02:45.8616718</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:02:45.8616718</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
-      <Name>6 - Karnath&#39;s Lair</Name>
+      <Name>6 - Karnath's Lair</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:03:43.2570733</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:03:43.2570733</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
-      <Name>7 - Volkmire&#39;s Inferno</Name>
+      <Name>7 - Volkmire's Inferno</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:04:06.8930182</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:04:06.8930182</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>8 - Intruder Excluder</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:01:42.1425757</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:01:42.1425757</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>9 - Terra Tubes</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:05:21.0266154</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:05:21.0266154</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>10 - Rat Race</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
       <BestSegmentTime>
+        <RealTime>00:00:35.8279683</RealTime>
       </BestSegmentTime>
-      <SegmentHistory />
+      <SegmentHistory>
+        <Time id="2">
+          <RealTime>00:00:35.8279683</RealTime>
+        </Time>
+      </SegmentHistory>
     </Segment>
     <Segment>
       <Name>11 - Clinger Winger</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
-      <BestSegmentTime>
-      </BestSegmentTime>
+      <BestSegmentTime />
       <SegmentHistory />
     </Segment>
     <Segment>
       <Name>12 - The Revolution</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
-      <BestSegmentTime>
-      </BestSegmentTime>
+      <BestSegmentTime />
       <SegmentHistory />
     </Segment>
     <Segment>
       <Name>Dark Queen</Name>
       <Icon />
       <SplitTimes>
-        <SplitTime name="Personal Best">
-        </SplitTime>
+        <SplitTime name="Personal Best" />
       </SplitTimes>
-      <BestSegmentTime>
-      </BestSegmentTime>
+      <BestSegmentTime />
       <SegmentHistory />
     </Segment>
   </Segments>
