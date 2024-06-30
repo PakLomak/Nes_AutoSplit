@@ -76,6 +76,15 @@
       <SegmentHistory />
     </Segment>
     <Segment>
+      <Name>Save 8</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
       <Name>Final Boss</Name>
       <Icon />
       <SplitTimes>
