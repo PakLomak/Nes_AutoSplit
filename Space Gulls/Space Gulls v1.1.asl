@@ -148,6 +148,8 @@ start
     if (current.save == 0x0C && old.RG == 0x00 && current.RG == 0x05) {
         vars.BossDead = false;
         vars.room6 = true;
+		vars.room7 = true;
+		vars.room8 = true;
         return true;
     }
 }
@@ -168,8 +170,14 @@ split
         vars.room6 = false;
         return true;
      } //6
-    if (settings["Room_save"] && current.RV == 0x06 && old.RG == 0x0B && current.RG == 0x0A) return true; //7
-    if (settings["Room_save"] && old.RV == 0x01 && current.RV == 0x01 && current.RG == 0x0A) return true; //8
+    if (settings["Room_save"] && current.RV == 0x06 && old.RG == 0x0B && current.RG == 0x0A && vars.room7 == true) {
+		vars.room7 = false;
+		return true;
+	 } //7
+    if (settings["Room_save"] && old.RV == 0x01 && current.RV == 0x01 && current.RG == 0x0A && vars.room8 == true) {
+		vars.room8 = false;
+		return true;
+	 } //8
     if (current.RG == 0x0D && current.RV == 0x00 && current.bosshp == 0x00) vars.BossDead = true;
     if (current.RG == 0x0D && current.RV == 0x02 && current.bird == 0x11 && vars.BossDead == true){
         vars.BossDead = false;
