@@ -4,6 +4,8 @@
   <GameName>Power Blade</GameName>
   <CategoryName>
   </CategoryName>
+  <LayoutPath>
+  </LayoutPath>
   <Metadata>
     <Run id="" />
     <Platform usesEmulator="True">Nintendo Entertainment System</Platform>
@@ -15,7 +17,7 @@
   <AttemptHistory />
   <Segments>
     <Segment>
-      <Name>1: UNIT DROID </Name>
+      <Name>-Card 1</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -24,7 +26,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>2: THE DRAGON</Name>
+      <Name>{Sector 1}Unit Droid</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -33,7 +35,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>3: KILLER BEES</Name>
+      <Name>-Card 2</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -42,7 +44,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>4: GREEN ALIEN</Name>
+      <Name>{Sector 2}Dragon</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -51,7 +53,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>5: BLUE MEGA-ROBOT</Name>
+      <Name>-Card 3</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -60,7 +62,7 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>6: THE TALL ROBOT</Name>
+      <Name>-Door 3</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
@@ -69,7 +71,115 @@
       <SegmentHistory />
     </Segment>
     <Segment>
-      <Name>7: THE SCIENTIST</Name>
+      <Name>{Sector 3}Kller Bees</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Clip 1 SR 3</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Clip 2 SR 12</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>{Sector 4}Green Alien</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Card 5</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>{Sector 5}Blue Mega-Robot</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Clip1 SR 2</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Clip2 SR 4</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-Door 6</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>{Sector 6}Tall Robot</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-7/1</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>-7/2</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best" />
+      </SplitTimes>
+      <BestSegmentTime />
+      <SegmentHistory />
+    </Segment>
+    <Segment>
+      <Name>{Sector 7}The Scientist</Name>
       <Icon />
       <SplitTimes>
         <SplitTime name="Personal Best" />
