@@ -190,7 +190,7 @@ split
 			return true;
 		}
 		if (settings["Card4"] && old.card == 0x00 && current.card == 0x01) return true;
-		if (settings["Clip4_2"] && current.corX == 0x06 && old.room == 0x05 && current.room == 0x04 && vars.clip4_1 == true){
+		if (settings["Clip4_2"] && current.corX == 0x06 && old.room == 0x05 && current.room == 0x04 && vars.clip4_2 == true){
 			vars.clip4_2 = false;
 			return true;
 		}
