@@ -165,6 +165,7 @@ start
 		vars.clip5_1 = true;
 		vars.clip6_1 = true;
 		vars.clip6_2 = true;
+		vars.half = true;
 		vars.sector7 = false;
 		vars.start = false;
 		return true;
@@ -217,9 +218,12 @@ split
 		if (settings["Door6"] && old.door == 0x00 && current.door == 0x01) return true;
 	}
 	if (old.sector == 0x06 && current.sector == 0x00) vars.sector7 = true;
-	if (settings["half"] && current.cor_x >= 0x48 && current.corX == 0x03 && old.room == 0x03 && current.room == 0x04 && vars.sector7 == true && vars.S7half == true){
-		vars.S7half = false;
-		return true;
+	if (settings["half"] && current.cor_x >= 0x48 && current.corX == 0x03 && old.room == 0x03 && current.room == 0x04 && vars.sector7 == true && vars.half == true){
+		if (old.room == 0x03 && current.room == 0x04 && vars.S7half == true && vars.half == true){
+			vars.half = false;
+			vars.S7half = false;
+			return true;
+		}
 	}
 	if (settings["Door7"] && current.room == 0x00 && old.door == 0x00 && current.door == 0x01 && vars.sector7 == true) return true;
     if (settings["Win_pose"] && current.screen == 0x08 && current.win == 0x0B && old.win != 0x0B) return true;
