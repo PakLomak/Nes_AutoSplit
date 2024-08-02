@@ -7,7 +7,7 @@ byte cor_x: "fceux64.exe", 0x04D59E0, 0x6A;
 byte room: "fceux64.exe", 0x04D59E0, 0x2B;
 byte card: "fceux64.exe", 0x04D59E0, 0x28;
 byte door: "fceux64.exe", 0x04D59E0, 0x31;
-byte sector: "fceux64.exe", 0x04D59E0, 0x56;
+byte sector: "fceux64.exe", 0x04D59E0, 0x2A;
 }
 state("Mesen", "0.9.9")
 {
@@ -18,7 +18,7 @@ byte cor_x: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x6A;
 byte room: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x2B;
 byte card: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x28;
 byte door: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x31;
-byte sector: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x56;
+byte sector: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x2A;
 }
 state("Mesen", "0.0.6")
 {
@@ -29,7 +29,7 @@ byte cor_x: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x6A;
 byte room: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x2B;
 byte card: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x28;
 byte door: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x31;
-byte sector: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x56;
+byte sector: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x2A;
 }
 state("Mesen", "2.0.0")
 {
@@ -40,7 +40,7 @@ byte cor_x: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x6A;
 byte room: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x2B;
 byte card: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x28;
 byte door: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x31;
-byte sector: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x56;
+byte sector: "MesenCore.dll", 0x44D5E28, 0x118, 0x18, 0x40, 0x28, 0x2A;
 }
 state("Mednafen", "0.9.48")
 {
@@ -51,7 +51,7 @@ byte cor_x: "mednafen.exe", 0x136E76A;
 byte room: "mednafen.exe", 0x136E72B;
 byte card: "mednafen.exe", 0x136E728;
 byte door: "mednafen.exe", 0x136E731;
-byte sector: "mednafen.exe", 0x136E756;
+byte sector: "mednafen.exe", 0x136E72A;
 }
 state("Mednafen", "1.29.0")
 {
@@ -62,7 +62,7 @@ byte cor_x: "mednafen.exe", 0x16675AA;
 byte room: "mednafen.exe", 0x166756B;
 byte card: "mednafen.exe", 0x1667568;
 byte door: "mednafen.exe", 0x1667571;
-byte sector: "mednafen.exe", 0x1667596;
+byte sector: "mednafen.exe", 0x166756A;
 }
 state("Nestopia", "1.40")
 {
@@ -73,7 +73,7 @@ byte cor_x: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xD2;
 byte room: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x93;
 byte card: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x90;
 byte door: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x99;
-byte sector: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0xBE;
+byte sector: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x92;
 }
 state("Nestopia", "1.52")
 {
@@ -84,7 +84,7 @@ byte cor_x: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 
 byte room: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x2B;
 byte card: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x28;
 byte door: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x31;
-byte sector: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x56;
+byte sector: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x2A;
 }
 state("Retroarch", "Mesen")
 {
@@ -95,7 +95,7 @@ byte cor_x: "mesen_libretro.dll", 0x0036F040, 0x60, 0x88, 0x100, 0x10, 0x120, 0x
 byte room: "mesen_libretro.dll", 0x0036F040, 0x60, 0x88, 0x100, 0x10, 0x120, 0x8, 0x2B;
 byte card: "mesen_libretro.dll", 0x0036F040, 0x60, 0x88, 0x100, 0x10, 0x120, 0x8, 0x28;
 byte door: "mesen_libretro.dll", 0x0036F040, 0x60, 0x88, 0x100, 0x10, 0x120, 0x8, 0x31;
-byte sector: "mesen_libretro.dll", 0x0036F040, 0x60, 0x88, 0x100, 0x10, 0x120, 0x8, 0x56;
+byte sector: "mesen_libretro.dll", 0x0036F040, 0x60, 0x88, 0x100, 0x10, 0x120, 0x8, 0x2A;
 }
 init
 {
@@ -165,8 +165,7 @@ start
 		vars.clip5_1 = true;
 		vars.clip6_1 = true;
 		vars.clip6_2 = true;
-		vars.half = true;
-		vars.sector7 = false;
+		vars.S7half = false;
 		vars.start = false;
 		return true;
 	}
@@ -175,7 +174,7 @@ split
 {
 	if (current.sector == 0x00){
 		if (settings["Card1"] && old.card == 0x00 && current.card == 0x01) return true;
-		if (settings["Door1"] && current.room == 0x06 && old.door == 0x00 && current.door == 0x01) return true;
+		if (settings["Door1"] && old.door == 0x00 && current.door == 0x01) return true;
 	}
 	if (current.sector == 0x01){
 		if (settings["Card2"] && old.card == 0x00 && current.card == 0x01) return true;
@@ -217,15 +216,14 @@ split
 		}
 		if (settings["Door6"] && old.door == 0x00 && current.door == 0x01) return true;
 	}
-	if (old.sector == 0x06 && current.sector == 0x00) vars.sector7 = true;
-	if (settings["half"] && current.cor_x >= 0x48 && current.corX == 0x03 && old.room == 0x03 && current.room == 0x04 && vars.sector7 == true && vars.half == true){
-		if (old.room == 0x03 && current.room == 0x04 && vars.S7half == true && vars.half == true){
-			vars.half = false;
-			vars.S7half = false;
-			return true;
-		}
+	if (old.sector == 0x06){
+		if (settings["half"] && current.room == 0x03 && current.cor_x >= 72 && current.corX == 0x03) vars.S7half = true;
+		if (old.room == 0x03 && current.room == 0x04 && vars.S7half == true){
+		vars.S7half = false;
+		return true;
 	}
-	if (settings["Door7"] && current.room == 0x00 && old.door == 0x00 && current.door == 0x01 && vars.sector7 == true) return true;
+		if (settings["Door7"] && old.door == 0x00 && current.door == 0x01) return true;
+	}
     if (settings["Win_pose"] && current.screen == 0x08 && current.win == 0x0B && old.win != 0x0B) return true;
 	if (settings["End_lvl"] && old.screen == 0x08 && current.screen == 0x03) return true;
     if (current.screen == 0x07 && current.win == 0x02 && old.win != 0x02) return true;
