@@ -229,7 +229,7 @@ split
 			}
 		}
 		if (settings["Clip4_2coor"]){
-			if (current.room == 0x04 && current.cor_x == 200 && current.cor_y >= 207 && current.cor_y == 240 && current.corX == 0x00) vars.PositionClip4_2 = true;
+			if (current.room == 0x04 && current.cor_x == 200 && current.cor_y >= 207 && current.cor_y <= 240 && current.corX == 0x00) vars.PositionClip4_2 = true;
 			if (current.room == 0x04 && current.corX == 0x00 && current.cor_y >= 95 && current.cor_y <= 143 && current.cor_x >= 218 && current.cor_x <= 231 && vars.PositionClip4_2 == true && vars.ActiveClip4_2){
 				vars.PositionClip4_2 = false;
 				vars.ActiveClip4_2 = false;
@@ -238,7 +238,7 @@ split
 		}
 		if (settings["Card4"] && old.card == 0x00 && current.card == 0x01) return true;
 		if (settings["Clip4_3coor"]){
-			if (current.room == 0x05 && current.cor_x == 200 && current.cor_y >= 207 && current.cor_y == 240 && current.corX == 0x06) vars.PositionClip4_3 = true;
+			if (current.room == 0x05 && current.cor_x == 200 && current.cor_y >= 207 && current.cor_y <= 240 && current.corX == 0x06) vars.PositionClip4_3 = true;
 			if (current.room == 0x05 && current.corX == 0x06 && current.cor_y >= 95 && current.cor_y <= 143 && current.cor_x >= 218 && current.cor_x <= 235 && vars.PositionClip4_3 == true && vars.ActiveClip4_3){
 				vars.PositionClip4_3 = false;
 				vars.ActiveClip4_3 = false;
