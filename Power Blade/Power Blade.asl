@@ -168,12 +168,28 @@ update
 start
 {
 	if (current.screen == 0x00 && old.win == 0x01 && current.win == 0x02) vars.start = true;
-    if (current.screen == 0x03 && current.win == 0x02 && vars.start == true){
+    if (current.screen == 0x03 && current.win == 0x02 && vars.start){
 		vars.clip4_1 = true;
 		vars.clip4_2 = true;
 		vars.clip5_1 = true;
 		vars.clip6_1 = true;
 		vars.clip6_2 = true;
+		vars.ActiveClip4_1 = true;
+		vars.ActiveClip4_2 = true;
+		vars.ActiveClip4_3 = true;
+		vars.ActiveClip5_1 = true;
+		vars.ActiveClip5_2 = true;
+		vars.ActiveClip6_1 = true;
+		vars.ActiveClip6_2 = true;
+		vars.ActiveClip6_3 = true;
+		vars.ActiveClip6_4 = true;
+		vars.Door_1= true;
+		vars.Door_2= true;
+		vars.Door_3= true;
+		vars.Door_4= true;
+		vars.Door_5= true;
+		vars.Door_6= true;
+		vars.Door_7= true;
 		vars.S7half = false;
 		vars.start = false;
 		return true;
@@ -181,42 +197,51 @@ start
 }
 split
 {
-	if (current.sector == 0x00){
+	if (current.sector == 0x00){ //sector 1
 		if (settings["Card1"] && old.card == 0x00 && current.card == 0x01) return true;
-		if (settings["Door1"] && old.door == 0x00 && current.door == 0x01) return true;
+		if (settings["Door1"] && old.door == 0x00 && current.door == 0x01 && vars.Door_1){ 
+			vars.Door_1 = false;
+			return true;}
 	}
-	if (current.sector == 0x01){
+	if (current.sector == 0x01){ //sector 2
 		if (settings["Card2"] && old.card == 0x00 && current.card == 0x01) return true;
-		if (settings["Door2"] && old.door == 0x00 && current.door == 0x01) return true;
+		if (settings["Door2"] && old.door == 0x00 && current.door == 0x01 && vars.Door_2){
+			vars.Door_2 = false;
+			return true;}
 	}
-	if (current.sector == 0x02){
+	if (current.sector == 0x02){ //sector 3
 		if (settings["Card3"] && old.card == 0x00 && current.card == 0x01) return true;
-		if (settings["Door3"] && old.door == 0x00 && current.door == 0x01) return true;
+		if (settings["Door3"] && old.door == 0x00 && current.door == 0x01 && vars.Door_3){
+			vars.Door_3 = false;
+			return true;}
 	}
-	if (current.sector == 0x03){
+	if (current.sector == 0x03){ //sector 4
 		if (settings["Clip4_1"] && current.corX == 0x01 && old.room == 0x04 && current.room == 0x05 && vars.clip4_1 == true){
 			vars.clip4_1 = false;
 			return true;
 		}
 		if (settings["Clip4_1coor"]){
-			if (current.room == 0x05 && current.cor_x == 232 && current.corX == 0x00) vars.PositionClip4_1 = true;
-			if (current.corX == 0x00 && current.cor_y <= 143 && current.cor_x >= 218 && current.cor_x <= 228 && vars.PositionClip4_1 == true){
+			if (current.room == 0x05 && current.cor_x == 232 && current.cor_y >= 207 && current.cor_y <= 240 && current.corX == 0x00) vars.PositionClip4_1 = true;
+			if (current.room == 0x05 && current.corX == 0x00 && current.cor_y <= 143 && current.cor_x >= 218 && current.cor_x <= 236 && vars.PositionClip4_1 == true && vars.ActiveClip4_1){
 				vars.PositionClip4_1 = false;
+				vars.ActiveClip4_1 = false;
 				return true;
 			}
 		}
 		if (settings["Clip4_2coor"]){
-			if (current.room == 0x04 && current.cor_x == 200 && current.corX == 0x00) vars.PositionClip4_2 = true;
-			if (current.corX == 0x00 && current.cor_y <= 143 && current.cor_x >= 218 && current.cor_x <= 231 && vars.PositionClip4_2 == true){
+			if (current.room == 0x04 && current.cor_x == 200 && current.cor_y >= 207 && current.cor_y == 240 && current.corX == 0x00) vars.PositionClip4_2 = true;
+			if (current.room == 0x04 && current.corX == 0x00 && current.cor_y >= 95 && current.cor_y <= 143 && current.cor_x >= 218 && current.cor_x <= 231 && vars.PositionClip4_2 == true && vars.ActiveClip4_2){
 				vars.PositionClip4_2 = false;
+				vars.ActiveClip4_2 = false;
 				return true;
 			}
 		}
 		if (settings["Card4"] && old.card == 0x00 && current.card == 0x01) return true;
 		if (settings["Clip4_3coor"]){
-			if (current.room == 0x05 && current.cor_x == 200 && current.corX == 0x06) vars.PositionClip4_3 = true;
-			if (current.corX == 0x06 && current.cor_y <= 143 && current.cor_x >= 218 && current.cor_x <= 231 && vars.PositionClip4_3 == true){
+			if (current.room == 0x05 && current.cor_x == 200 && current.cor_y >= 207 && current.cor_y == 240 && current.corX == 0x06) vars.PositionClip4_3 = true;
+			if (current.room == 0x05 && current.corX == 0x06 && current.cor_y >= 95 && current.cor_y <= 143 && current.cor_x >= 218 && current.cor_x <= 235 && vars.PositionClip4_3 == true && vars.ActiveClip4_3){
 				vars.PositionClip4_3 = false;
+				vars.ActiveClip4_3 = false;
 				return true;
 			}
 		}
@@ -224,31 +249,37 @@ split
 			vars.clip4_2 = false;
 			return true;
 		}
-		if (settings["Door4"] && old.door == 0x00 && current.door == 0x01) return true;
+		if (settings["Door4"] && old.door == 0x00 && current.door == 0x01 && vars.Door_4){
+			vars.Door_4 = false;
+			return true;}
 	}
-	if (current.sector == 0x04){
+	if (current.sector == 0x04){ //sector 5
 		if (settings["Clip5_1"] && current.corX == 0x09 && old.room == 0x01 && current.room == 0x00 && vars.clip5_1 == true){
 			vars.clip5_1 = false;
 			return true;
 		}
 		if (settings["Clip5_1coor"]){
 			if (current.room == 0x01 && current.cor_x == 8 && current.corX == 0x09) vars.PositionClip5_1 = true;
-			if (current.corX == 0x09 && current.cor_y <= 111 && current.cor_x >= 186 && current.cor_x <= 199 && vars.PositionClip5_1 == true){
+			if (current.room == 0x01 && current.corX == 0x09 && current.cor_y <= 111 && current.cor_x >= 186 && current.cor_x <= 199 && vars.PositionClip5_1 == true && vars.ActiveClip5_1){
 				vars.PositionClip5_1 = false;
+				vars.ActiveClip5_1 = false;
 				return true;
 			}
 		}
 		if (settings["Card5"] && old.card == 0x00 && current.card == 0x01) return true;
 		if (settings["Clip5_2coor"]){
 			if (current.room == 0x00 && current.cor_x == 232 && current.corX == 0x09) vars.PositionClip5_2 = true;
-			if (current.corX == 0x0A && current.cor_y <= 143 && current.cor_x >= 23 && current.cor_x <= 36 && vars.PositionClip5_2 == true){
+			if (current.room == 0x00 && current.corX == 0x0A && current.cor_y <= 143 && current.cor_x >= 23 && current.cor_x <= 36 && vars.PositionClip5_2 == true && vars.ActiveClip5_2){
 				vars.PositionClip5_2 = false;
+				vars.ActiveClip5_2 = false;
 				return true;
 			}
 		}
-		if (settings["Door5"] && old.door == 0x00 && current.door == 0x01) return true;
+		if (settings["Door5"] && old.door == 0x00 && current.door == 0x01 && vars.Door_5){
+			vars.Door_5 = false;
+			return true;}
 	}
-	if (current.sector == 0x05){
+	if (current.sector == 0x05){  //sector 6
 		if (settings["Card6"] && old.card == 0x00 && current.card == 0x01) return true;
 		if (settings["Clip6_1"] && current.corX == 0x04 && old.room == 0x03 && current.room == 0x02 && vars.clip6_1 == true){
 			vars.clip6_1 = false;
@@ -256,15 +287,17 @@ split
 		}
 		if (settings["Clip6_1coor"]){
 			if (current.room == 0x03 && current.cor_x >= 163 && current.cor_x <= 200 && current.corX == 0x02 && current.card == 0x01) vars.PositionClip6_1 = true;
-			if (current.corX == 0x03 && current.cor_y <= 127 && current.cor_x >= 120 && current.cor_x <= 135 && vars.PositionClip6_1 == true){
+			if (current.room == 0x03 && current.corX == 0x03 && current.cor_y <= 127 && current.cor_x >= 120 && current.cor_x <= 135 && vars.PositionClip6_1 == true && vars.ActiveClip6_1){
 				vars.PositionClip6_1 = false;
+				vars.ActiveClip6_1 = false;
 				return true;
 			}
 		}
 		if (settings["Clip6_2coor"]){
 			if (current.room == 0x03 && current.cor_x >= 106 && current.cor_x <= 133 && current.corX == 0x06 && current.card == 0x01) vars.PositionClip6_2 = true;
-			if (current.corX == 0x06 && current.cor_y <= 143 && current.cor_x >= 200 && current.cor_x <= 219 && vars.PositionClip6_2 == true){
+			if (current.room == 0x03 && current.corX == 0x06 && current.cor_y <= 143 && current.cor_x >= 210 && current.cor_x <= 225 && vars.PositionClip6_2 == true && vars.ActiveClip6_2){
 				vars.PositionClip6_2 = false;
+				vars.ActiveClip6_2 = false;
 				return true;
 			}
 		}
@@ -274,27 +307,33 @@ split
 		}
 		if (settings["Clip6_3coor"]){
 			if (current.room == 0x01 && current.cor_x >= 0 && current.cor_x <= 30 && current.corX == 0x0D && current.card == 0x01) vars.PositionClip6_3 = true;
-			if (current.corX == 0x0D && current.cor_y <= 112 && current.cor_x >= 58 && current.cor_x <= 71 && vars.PositionClip6_3 == true){
+			if (current.room == 0x01 && current.corX == 0x0D && current.cor_y <= 111 && current.cor_x >= 58 && current.cor_x <= 71 && vars.PositionClip6_3 == true && vars.ActiveClip6_3){
 				vars.PositionClip6_3 = false;
+				vars.ActiveClip6_3 = false;
 				return true;
 			}
 		}
 		if (settings["Clip6_4coor"]){
 			if (current.room == 0x00 && current.cor_x == 72 && current.corX == 0x0D && current.card == 0x01) vars.PositionClip6_4 = true;
-			if (current.corX == 0x0D && current.cor_y <= 143 && current.cor_x >= 58 && current.cor_x <= 72 && vars.PositionClip6_4 == true){
+			if (current.room == 0x00 && current.corX == 0x0D && current.cor_y <= 143 && current.cor_x >= 58 && current.cor_x <= 72 && vars.PositionClip6_4 == true && vars.ActiveClip6_4){
 				vars.PositionClip6_4 = false;
+				vars.ActiveClip6_4 = false;
 				return true;
 			}
 		}
-		if (settings["Door6"] && old.door == 0x00 && current.door == 0x01) return true;
+		if (settings["Door6"] && old.door == 0x00 && current.door == 0x01 && vars.Door_6){
+			vars.Door_6 = false;
+			return true;}
 	}
-	if (old.sector == 0x06){
+	if (old.sector == 0x06){  //sector 7
 		if (settings["half"] && current.room == 0x03 && current.cor_x >= 72 && current.corX == 0x03) vars.S7half = true;
 		if (old.room == 0x03 && current.room == 0x04 && vars.S7half == true){
 		vars.S7half = false;
 		return true;
 	}
-		if (settings["Door7"] && old.door == 0x00 && current.door == 0x01) return true;
+		if (settings["Door7"] && old.door == 0x00 && current.door == 0x01 && vars.Door_7){
+			vars.Door_7 = false;
+			return true;}
 	}
     if (settings["Win_pose"] && current.screen == 0x08 && current.win == 0x0B && old.win != 0x0B) return true;
 	if (settings["End_lvl"] && old.screen == 0x08 && current.screen == 0x03) return true;
