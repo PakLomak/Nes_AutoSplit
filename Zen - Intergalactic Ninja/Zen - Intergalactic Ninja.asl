@@ -323,7 +323,7 @@ split
 		vars.bonus = false;
 		return true;
 	}
-	if (current.HpBosses >= 0x01 && current.HpBosses <= 0x18 && current.hp_Ninja != 0x00) vars.SplitON = true;
+	if (current.HpBosses >= 0x01 && current.HpBosses <= 0x18 && current.hp_Ninja != 0x00 && current.Level != 0x02 && current.Level != 0x03) vars.SplitON = true;
 	//print ("Line 327, SplitON " + vars.SplitON);
     if (current.Level == 0x01 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00 && vars.SplitON == true){
 		vars.SplitON = false;
