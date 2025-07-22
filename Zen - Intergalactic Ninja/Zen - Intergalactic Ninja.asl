@@ -17,6 +17,7 @@ byte Screen: 0x3B1388, 0x20;
 byte white_screen_02: 0x3B1388, 0x9D;
 byte zvezda: 0x3B1388, 0x4D0;
 byte puzar: 0x3B1388, 0x4C3;
+byte hp_Ninja: 0x3B1388, 0x520;
 }
 state("Fceux", "2.4.0")
 {
@@ -29,6 +30,7 @@ byte Screen: 0x44DCD8, 0x20;
 byte white_screen_02: 0x44DCD8, 0x9D;
 byte zvezda: 0x44DCD8, 0x4D0;
 byte puzar: 0x44DCD8, 0x4C3;
+byte hp_Ninja: 0x44DCD8, 0x520;
 }
 state("qFceux", "2.6.4")
 {
@@ -41,6 +43,7 @@ byte Screen: "qfceux.exe", 0x0318340, 0x20;
 byte white_screen_02: "qfceux.exe", 0x0318340, 0x9D;
 byte zvezda: "qfceux.exe", 0x0318340, 0x4D0;
 byte puzar: "qfceux.exe", 0x0318340, 0x4C3;
+byte hp_Ninja: "qfceux.exe", 0x0318340, 0x520;
 }
 state("fcadefbneo", "2.1.45")
 {
@@ -53,6 +56,7 @@ byte Screen: "fcadefbneo.exe", 0x04348848, 0x20;
 byte white_screen_02: "fcadefbneo.exe", 0x04348848, 0x9D;
 byte zvezda: "fcadefbneo.exe", 0x04348848, 0x4D0;
 byte puzar: "fcadefbneo.exe", 0x04348848, 0x4C3;
+byte hp_Ninja: "fcadefbneo.exe", 0x04348848, 0x520;
 }
 state("Mesen", "0.9.7")
 {
@@ -65,6 +69,7 @@ byte Screen: "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x20;
 byte white_screen_02: "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x9D;
 byte zvezda: "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x4D0;
 byte puzar: "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x4C3;
+byte hp_Ninja: "MesenCore.dll", 0x4311838, 0x118, 0xB8, 0x90, 0x1D8, 0x08, 0x520;
 }
 state("Mesen", "0.9.8")
 {
@@ -77,6 +82,7 @@ byte Screen: "MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x20;
 byte white_screen_02: "MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x9D;
 byte zvezda: "MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x4D0;
 byte puzar: "MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x4C3;
+byte hp_Ninja: "MesenCore.dll", 0x4327750, 0xB8, 0x78, 0x520;
 }
 state("Mesen", "0.9.9")
 {
@@ -89,6 +95,7 @@ byte Screen: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x20;
 byte white_screen_02: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x9D;
 byte zvezda: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x4D0;
 byte puzar: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x4C3;
+byte hp_Ninja: "MesenCore.dll", 0x42E0F30, 0xB8, 0x58, 0x520;
 }
 state("Mesen", "0.0.6")
 {
@@ -101,6 +108,7 @@ byte Screen: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x20;
 byte white_screen_02: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x9D;
 byte zvezda: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x4D0;
 byte puzar: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x4C3;
+byte hp_Ninja: "MesenCore.dll", 0x42FA9C0, 0xB8, 0x58, 0x520;
 }
 state("Mesen", "2.0.0")
 {
@@ -113,6 +121,7 @@ byte Screen: "MesenCore.dll", 0x046C0550, 0x18, 0x40, 0x50, 0x8, 0x20;
 byte white_screen_02: "MesenCore.dll", 0x046C0550, 0x18, 0x40, 0x50, 0x8, 0x9D;
 byte zvezda: "MesenCore.dll", 0x046C0550, 0x18, 0x40, 0x50, 0x8, 0x4D0;
 byte puzar: "MesenCore.dll", 0x046C0550, 0x18, 0x40, 0x50, 0x8, 0x4C3;
+byte hp_Ninja: "MesenCore.dll", 0x046C0550, 0x18, 0x40, 0x50, 0x8, 0x520;
 }
 state("Mednafen", "0.9.48")
 {
@@ -125,6 +134,7 @@ byte Screen: "mednafen.exe", 0x136E720;
 byte white_screen_02: "mednafen.exe", 0x136E79D;
 byte zvezda: "mednafen.exe", 0x136EBD0;
 byte puzar: "mednafen.exe", 0x136EBC3;
+byte hp_Ninja: "mednafen.exe", 0x136EC20;
 }
 state("Mednafen", "1.27.1")
 {
@@ -137,6 +147,7 @@ byte Screen: "mednafen.exe", 0x1711560;
 byte white_screen_02: "mednafen.exe", 0x17115DD;
 byte zvezda: "mednafen.exe", 0x1711A10;
 byte puzar: "mednafen.exe", 0x1711A03;
+byte hp_Ninja: "mednafen.exe", 0x1711A60;
 }
 state("Mednafen", "1.29.0")
 {
@@ -149,6 +160,7 @@ byte Screen: "mednafen.exe", 0x1667560;
 byte white_screen_02: "mednafen.exe", 0x16675DD;
 byte zvezda: "mednafen.exe", 0x1667A10;
 byte puzar: "mednafen.exe", 0x1667A03;
+byte hp_Ninja: "mednafen.exe", 0x1667A60;
 }
 state("Mednafen", "1.32.1")
 {
@@ -161,6 +173,7 @@ byte Screen: "mednafen.exe", 0x16AEA20;
 byte white_screen_02: "mednafen.exe", 0x16AEA9D;
 byte zvezda: "mednafen.exe", 0x16AEED0;
 byte puzar: "mednafen.exe", 0x16AEEC3;
+byte hp_Ninja: "mednafen.exe", 0x16AEF20;
 }
 state("Nestopia", "1.40")
 {
@@ -173,6 +186,7 @@ byte Screen: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x88;
 byte white_screen_02: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x105;
 byte zvezda: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x538;
 byte puzar: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x52B;
+byte hp_Ninja: "nestopia.exe", 0x1B2BCC, 0x00, 0x08, 0x0C, 0x0C, 0x588;
 }
 state("Nestopia", "1.52")
 {
@@ -185,6 +199,7 @@ byte Screen: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4,
 byte white_screen_02: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x9D;
 byte zvezda: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x4D0;
 byte puzar: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x4C3;
+byte hp_Ninja: "nestopia.exe", 0x0178020, 0xA0, 0xB18, 0xA1C, 0xA10, 0xA04, 0xAC4, 0x520;
 }
 state("Retroarch", "fceux")
 {
@@ -197,6 +212,7 @@ byte Screen: "fceumm_libretro.dll" ,0x0034DD28, 0x20;
 byte white_screen_02: "fceumm_libretro.dll" ,0x0034DD28, 0x9D;
 byte zvezda: "fceumm_libretro.dll" ,0x0034DD28, 0x4D0;
 byte puzar: "fceumm_libretro.dll" ,0x0034DD28, 0x4C3;
+byte hp_Ninja: "fceumm_libretro.dll" ,0x0034DD28, 0x520;
 }
 state("Retroarch", "Mesen")
 {
@@ -209,6 +225,7 @@ byte Screen: "retroarch.exe", 0x00FB9BE8, 0x408, 0x20;
 byte white_screen_02: "retroarch.exe", 0x00FB9BE8, 0x408, 0x9D;
 byte zvezda: "retroarch.exe", 0x00FB9BE8, 0x408, 0x4D0;
 byte puzar: "retroarch.exe", 0x00FB9BE8, 0x408, 0x4C3;
+byte hp_Ninja: "retroarch.exe", 0x00FB9BE8, 0x408, 0x520;
 }
 state("Ares", "143")
 {
@@ -221,10 +238,12 @@ byte Screen: "ares.exe", 0x05F5C938, 0x20;
 byte white_screen_02: "ares.exe", 0x05F5C938, 0x9D;
 byte zvezda: "ares.exe", 0x05F5C938, 0x4D0;
 byte puzar: "ares.exe", 0x05F5C938, 0x4C3;
+byte hp_Ninja: "ares.exe", 0x05F5C938, 0x520;
 }
 init
 {
 	vars.bonus = false;
+	vars.SplitON = false;
 int memSize = modules.First().ModuleMemorySize;
 switch (memSize)
 {
@@ -286,6 +305,7 @@ start
 {
     if (current.Screen != 0x04 && current.FrameCount != 0x00 && current.Menu == 0x00 && old.start == 0x01 && current.start == 0x02){
 		vars.bonus = false;
+		vars.SplitON = false;
 		return true;
 	}
 }
@@ -294,6 +314,7 @@ split
     //if (old.Level == 0x02 && current.Level == 0x0B) return true;
 	if (current.Level == 0x02 && current.HpBosses == 0x00 && old.white_screen_02 == 0xFF && current.white_screen_02 == 0x01) return true;
 	if (old.Level != 0x0B && current.Level == 0x0B) vars.bonus = true;
+	//print ("Line 317, Bonus " + vars.bonus);
 	if (old.Level != 0x03 && current.Level == 0x03 && vars.bonus == true){
 		vars.bonus = false;
 		return true;
@@ -302,10 +323,18 @@ split
 		vars.bonus = false;
 		return true;
 	}
-    if (current.Level == 0x01 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00) return true;
+	if (current.HpBosses >= 0x01 && current.HpBosses <= 0x18 && current.hp_Ninja != 0x00) vars.SplitON = true;
+	//print ("Line 327, SplitON " + vars.SplitON);
+    if (current.Level == 0x01 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00 && vars.SplitON == true){
+		vars.SplitON = false;
+		return true;
+	}
     if (current.Level == 0x04 && current.HpBosses == 0x00 && old.puzar == 0x07 && current.puzar == 0x00) return true;
     if (old.Level == 0x03 && current.Level == 0x0B) return true; // Оставить
-    if (current.Level == 0x00 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00) return true;
+    if (current.Level == 0x00 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00 && vars.SplitON == true){
+		vars.SplitON = false;
+		return true;
+	}
     if (old.Level == 0x05 && current.Level == 0x06) return true;
     if (old.Level == 0x06 && current.Level == 0x07) return true;
     if (old.Level == 0x07 && current.Level == 0x08) return true;
