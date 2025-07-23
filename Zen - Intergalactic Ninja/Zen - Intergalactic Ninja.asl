@@ -1,11 +1,3 @@
-// 00 - Forest Ведьма
-// 01 - Of shore dil rig Черняга
-// 02 - Toxic factory Пылесос
-// 03 - high speed railway Мусорка
-// 04 - Чела спасать
-// 05 - Cave 
-// 06 - Болотный чудик
-// 0B - Bonus
 state("Fceux", "2.2.3")
 {
 byte start: 0x3B1388, 0x23;
@@ -214,19 +206,6 @@ byte zvezda: "fceumm_libretro.dll" ,0x0034DD28, 0x4D0;
 byte puzar: "fceumm_libretro.dll" ,0x0034DD28, 0x4C3;
 byte hp_Ninja: "fceumm_libretro.dll" ,0x0034DD28, 0x520;
 }
-state("Retroarch", "Mesen")
-{
-byte start: "retroarch.exe", 0x00FB9BE8, 0x408, 0x23;
-byte FrameCount: "retroarch.exe", 0x00FB9BE8, 0x408, 0x64;
-byte Level: "retroarch.exe", 0x00FB9BE8, 0x408, 0x5A;
-byte Menu: "retroarch.exe", 0x00FB9BE8, 0x408, 0x2D;
-byte HpBosses: "retroarch.exe", 0x00FB9BE8, 0x408, 0x522;
-byte Screen: "retroarch.exe", 0x00FB9BE8, 0x408, 0x20;
-byte white_screen_02: "retroarch.exe", 0x00FB9BE8, 0x408, 0x9D;
-byte zvezda: "retroarch.exe", 0x00FB9BE8, 0x408, 0x4D0;
-byte puzar: "retroarch.exe", 0x00FB9BE8, 0x408, 0x4C3;
-byte hp_Ninja: "retroarch.exe", 0x00FB9BE8, 0x408, 0x520;
-}
 state("Ares", "143")
 {
 byte start: "ares.exe", 0x05F5C938, 0x23;
@@ -311,30 +290,44 @@ start
 }
 split
 {
-    //if (old.Level == 0x02 && current.Level == 0x0B) return true;
-	if (current.Level == 0x02 && current.HpBosses == 0x00 && old.white_screen_02 == 0xFF && current.white_screen_02 == 0x01) return true;
+	if (settings["Bonus"]){
 	if (old.Level != 0x0B && current.Level == 0x0B) vars.bonus = true;
-	//print ("Line 317, Bonus " + vars.bonus);
-	if (old.Level != 0x03 && current.Level == 0x03 && vars.bonus == true){
-		vars.bonus = false;
-		return true;
-	}
 	if (old.Level != 0x00 && current.Level == 0x00 && vars.bonus == true){
 		vars.bonus = false;
 		return true;
 	}
-	if (current.HpBosses >= 0x01 && current.HpBosses <= 0x18 && current.hp_Ninja != 0x00 && current.Level != 0x02 && current.Level != 0x03) vars.SplitON = true;
-	//print ("Line 327, SplitON " + vars.SplitON);
+	if (old.Level != 0x01 && current.Level == 0x01 && vars.bonus == true){
+		vars.bonus = false;
+		return true;
+	}
+	if (old.Level != 0x02 && current.Level == 0x02 && vars.bonus == true){
+		vars.bonus = false;
+		return true;
+	}
+	if (old.Level != 0x03 && current.Level == 0x03 && vars.bonus == true){
+		vars.bonus = false;
+		return true;
+	}
+	}//bonus
+	if (current.HpBosses >= 20 && current.HpBosses <= 58 && current.hp_Ninja != 0) vars.SplitON = true;
+	if (settings["Tf02W"] && current.Level == 0x02 && current.HpBosses == 0x00 && old.white_screen_02 == 0xFF && current.white_screen_02 == 0x01) return true;
+	if (settings["Tf02B"] && current.Level == 0x02 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00 && vars.SplitON == true){
+		vars.SplitON = false;
+		return true;
+	}
     if (current.Level == 0x01 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00 && vars.SplitON == true){
 		vars.SplitON = false;
 		return true;
 	}
     if (current.Level == 0x04 && current.HpBosses == 0x00 && old.puzar == 0x07 && current.puzar == 0x00) return true;
-    if (old.Level == 0x03 && current.Level == 0x0B) return true; // Оставить
-    if (current.Level == 0x00 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00 && vars.SplitON == true){
+    if (current.Level == 0x03 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00 && vars.SplitON == true){
 		vars.SplitON = false;
 		return true;
 	}
+    if (current.Level == 0x00 && current.HpBosses == 0x00 && old.zvezda == 0x03 && current.zvezda == 0x00 && vars.SplitON == true){
+		vars.SplitON = false;
+		return true;
+	}//SplitON
     if (old.Level == 0x05 && current.Level == 0x06) return true;
     if (old.Level == 0x06 && current.Level == 0x07) return true;
     if (old.Level == 0x07 && current.Level == 0x08) return true;
@@ -350,4 +343,8 @@ startup
 {
 	settings.Add("main", false, "AutoSplitter for Zen - Intergalactic Ninja by PakLomak");
 	settings.Add("main3", false, "--https://www.twitch.tv/paklomak", "main");
+	settings.Add("options", true, "Options");
+	settings.Add("Bonus", true, "After bonus", "options");
+	settings.Add("Tf02B", true, "Toxic factory Black Screen", "options");
+    settings.Add("Tf02W", false, "Toxic factory White Screen", "options");
 }
