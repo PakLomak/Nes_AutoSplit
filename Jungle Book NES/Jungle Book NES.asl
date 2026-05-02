@@ -219,7 +219,7 @@ start
 split
 {
 	if (settings["Before_Boss"] && current.level >= 0x01 && old.Boss_here == 0x00 && current.Boss_here == 0x80 && current.boss_hp == 0x18) return true;
-	if (old.level == current.level + 1) return true;
+	if (current.level == old.level + 1) return true;
     if (current.level == 0x09 && old.boss_hp == 0x01 && current.boss_hp == 0x00) return true;
     /*if (old.level == 0x00 && current.level == 0x01) return true;
     if (old.level == 0x01 && current.level == 0x02) return true;
