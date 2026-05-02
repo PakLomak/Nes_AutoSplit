@@ -209,7 +209,7 @@ switch (memSize)
 }
 update
 {
-	print(vars.start.ToString());
+	//print(vars.start.ToString());
 }
 start
 {
